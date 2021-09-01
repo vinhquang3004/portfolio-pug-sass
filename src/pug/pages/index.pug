@@ -1,0 +1,95 @@
+extends ../base/base.pug
+include ../components/carousel.pug
+
+block variables 
+    - const title = 'home'
+    - const currentPage = '/'
+
+block content
+    section.intro 
+        .container 
+            .row 
+                .col-lg-6.intro__image
+                    img(src="./assets/images/about-us.png" alt="")
+                .col-lg-6.intro__content
+                    - const {span1, span2, span3, about1, about2 } = content.about
+                        h3.intro__title.text-uppercase.pt-5
+                            span.d-block= span1
+                            span.d-block= span2
+                            span.d-block= span3
+                        .paragraph.py-4
+                            p.para= about1
+                            p.para= about2
+                        button.btn.btn-primary.text-uppercase Download CV
+
+    section.brand 
+        .container 
+            .row
+                .col-lg-6 
+                    .row 
+                        each item in brand.brandLeft
+                            .col-lg-4.col-md-6
+                                .brand__single 
+                                    img(src=`./assets/images/brands/${item.img}`, alt= `${item.alt}`)   
+                .col-lg-6.d-flex.justify-content-center.align-items-center
+                    .brand__right
+                        - const {yearExp,brandSpan1, brandSpan2, brandSpan3, brandSpan4, phone} = brand.brandRight
+                            .brand__right__content
+                                .brand__right-title
+                                    h3.brand__right-year= yearExp
+                                    h3
+                                        span= brandSpan1 
+                                        span= brandSpan2 
+                                        span= brandSpan3 
+                                .brand__phone
+                                    span.fas.fa-phone-alt.fa-3x
+                                    .brand__call-now
+                                        h3.brand__call-title= brandSpan4
+                                        span= phone
+    section.service 
+        .container 
+            .row 
+                - const {serviceTitle, servicePara } = service
+                    .col-lg-12.service__head.text-center.my-5
+                        h3= serviceTitle
+                        p= servicePara
+            .row 
+                each item in service.cards
+                    .col-lg-3.col-md-6.col-sm-12
+                        .service__card
+                            .service__card-img.text-center.my-5
+                                img.mx-auto(src=`./assets/images/services/${item.img}` alt=`${item.alt}`)
+                            .service__card-text.text-center
+                                h3.text-uppercase= item.title
+                                p= item.desc
+    section.project 
+        .container 
+            .project__title.px-5
+                h3.pb-5
+                    span.project__title1.text-uppercase.d-block recently done project
+                    span.project__title2.text-uppercase.d-block quality work 
+            .project__button-group.px-5
+                - var count = 0
+                each item in ["All","Popular","Latest","Following","Upcoming"]
+                    - count ++
+                    button.btn.btn-transparent(class= count === 1 ? 'active': null)= item
+            .project__grid 
+                .row.justify-content-center
+                    each item in project
+                        - const {img, alt, name, desc} = item
+                        .col-lg-4.col-md-6.col-sm-12.d-flex.flex-column.align-items-center
+                            .project__card
+                                .project__card-image 
+                                    a(href="#") 
+                                        img.img-hover(src=`./assets/images/portfolio/${img}` alt=`${alt}`)
+                                .project__card-desc
+                                    h3.text-uppercase.h1.my-3= name
+                                    p= desc
+    section.about 
+        .container 
+            .about__content.d-flex.justify-content-center.align-items-center.flex-column.text-center
+                h3.text-uppercase.h1.my-3.d-block client say about me 
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, deleniti recusandae. Esse incidunt rem repellendus ab voluptates maxime? Nemo, numquam!
+        .container
+            +carousel('testimonial')
+

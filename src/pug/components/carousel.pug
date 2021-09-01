@@ -1,0 +1,24 @@
+mixin carousel(id)
+    .carousel(id= id)
+        .row 
+            .col-md-12 
+                #carouselExampleIndicators.carousel.slide(data-bs-ride="carousel")
+                    .carousel-indicators.bg-light
+                        button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1') 
+                        button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2') 
+                        button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+                    .carousel-inner(role="listbox")
+                        - var count = 0
+                        each item in carousel.items
+                            - count++
+                            .carousel-item(class= count === 1 ? 'active': null)
+                                .about__carousel-item
+                                    .row.justify-content-center 
+                                        each listItem in item 
+                                            - const {img, alt, name, comment} = listItem
+                                            .col-lg-4
+                                                .comment-box.d-flex.align-items-center
+                                                    img(src=`./assets/images/testimonials/${img}`, alt=`${alt}`)
+                                                    .carousel__content.d-flex.algin-items-center.flex-column
+                                                        h3.carousel__name.h3.text-uppercase= name
+                                                        p.carousel__comment= comment

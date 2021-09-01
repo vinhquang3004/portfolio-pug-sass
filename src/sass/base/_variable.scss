@@ -1,0 +1,39 @@
+// color
+$white: #fff;
+$black: #000;
+$gray: #818181;
+
+$light-gray: #cacaca;
+$dark-gray: #252525;
+
+$primary-color: #4458dc;
+$secondary-color: #854fee;
+$text-color: #777777;
+$orange-color: #f26522;
+$gradient-color: linear-gradient(90deg, #4458dc, #854fee);
+
+$shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+$box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+// // font
+// @font-face {
+//   font-family: "ROboto";
+//   src: url("../fonts/Roboto.ttf");
+// }
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+$primary-font: "Roboto", cursive;
+$secondary-font: "UTM Aquarelle", sans-serif;
+$third-font: "UTM Caviar", sans-serif;
+$fourth-font: "Lobster", cursive;
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);

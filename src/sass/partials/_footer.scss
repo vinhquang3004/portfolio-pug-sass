@@ -1,0 +1,29 @@
+.footer {
+    margin: 100px 0;
+    &__social {
+        margin-bottom: 30px;
+        h3 {
+            margin: 20px;
+            color: $primary-color;
+        }
+        a {
+            color: $light-gray;
+            i {
+                font-size: 2.5rem;
+                line-height: 4rem;
+            }
+        }
+    }
+
+    &__copyright {
+        p{
+            font: 400 1.6rem/1.2 $primary-font;
+            a{
+                span{
+                    color: $secondary-color;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}

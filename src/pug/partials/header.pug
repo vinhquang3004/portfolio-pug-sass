@@ -1,0 +1,28 @@
+header.header
+    .header__nav
+        nav.navbar.navbar-expand-lg.navbar-light
+            .container-fluid.header__top-nav
+                a.header__logo.navbar-brand(href='#')
+                    img(src="./assets/images/logo.png" alt="logo")
+                button.header__navbar-toggle.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav.header__nav-list
+                        each item in header.navItems
+                            li.nav-item.header__nav-item
+                                a.nav-link(href= item.link, class= `${currentPage === item.link ? 'active' : ''}` )= item.title
+
+    .header__banner 
+        .container 
+            .row 
+                .col-lg-6.header__site-title
+                    - const {title1, title2, title3} = header.intro
+                        h3.title-text.title-text_hey= title1 
+                        h2.title-text.text-uppercase= title2 
+                        h3.title-text= title3
+                    .header__button-group.d-flex.flex-row.flex-wrap 
+                        button.btn.btn-primary Hire me 
+                        button.btn get CV 
+                .col-lg-6.header__banner-image
+                    - const {bannerImg, altImg} = header.banner
+                        img(src=`./assets/images/banner/${bannerImg}` alt=`${altImg}`)

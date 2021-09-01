@@ -1,0 +1,8 @@
+.img-hover{
+    @include transition;
+    &:hover {
+        box-shadow: $box-shadow;
+        transform: scale(1.1);
+        filter: brightness(1.07);
+    }
+}
