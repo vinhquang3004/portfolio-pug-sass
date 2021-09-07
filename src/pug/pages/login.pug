@@ -1,0 +1,33 @@
+extends ../base/base.pug
+
+include ../components/breadcrumb.pug
+include ../components/input.pug
+
+block variables 
+    - const title = 'login'
+    - const currentPage = '/login.html'
+
+block content 
+    +breadcrumbs(breadcrumbs.login, currentPage)
+    
+    section.login 
+        .container 
+            .login__header.bg-light.p-5.my-5.text-uppercase.text-center
+                h3 Login 
+            .login__content 
+                .row.d-flex.justify-content-center
+                    .col-md-6.colsm-12
+                        form
+                            +form-input("emailAddress", "Email address", "email", true)
+                            +form-input("password", "Password", "password", true)
+                            .my-5.form-check.d-flex.align-items-center
+                                input#exampleCheck1.form-check-input(type='checkbox')
+                                label.form-check-label(for='exampleCheck1') Remember me?
+                                a(href="").ms-auto
+                                    span forgot password?
+                            .login__summit.d-flex.justify-content-center
+                                button.btn.btn-primary(type='submit') Sign in
+                        .login__unregister.text-center.my-5
+                            span Not a member? 
+                                a(href="/register.html") Register 
+                    

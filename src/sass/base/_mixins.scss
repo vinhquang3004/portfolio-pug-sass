@@ -167,3 +167,12 @@
   @include flex-center;
   flex-direction: column;
 }
+
+@mixin scale-img{
+  @include transition;
+
+  &:hover {
+    box-shadow: $box-shadow;
+    transform: scale(1.1);
+  }
+}

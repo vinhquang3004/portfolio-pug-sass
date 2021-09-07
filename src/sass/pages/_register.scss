@@ -1,0 +1,32 @@
+.register {
+    &__header {
+        h3 {
+            font: 500 3rem/3 $primary-font;
+            color: $gray;
+        }
+    }
+    &__content {
+        form {
+            .form-label {
+                padding-left: 20px;
+                font: 500 1.8rem/1.4 $primary-font;
+                color: $gray;
+            }
+            .form-control {
+                height: 40px;
+                font: 400 1.6rem/2 $primary-font;
+                padding: 20px;
+            }
+            .form-check-label {
+                font: 500 1.6rem/2 $primary-font;
+            }
+            .form-check-input {
+                padding: 10px;
+                margin-right: 20px;
+            }
+        }
+        .register-have-account{
+            font: 400 1.6rem/1.4 $primary-font;
+        }
+    }
+}

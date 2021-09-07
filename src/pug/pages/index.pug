@@ -6,6 +6,21 @@ block variables
     - const currentPage = '/'
 
 block content
+    section.banner 
+        .header__banner 
+            .container 
+                .row 
+                    .col-lg-6.banner__site-title
+                        - const {title1, title2, title3} = header.intro
+                            h3.title-text.title-text_hey= title1 
+                            h2.title-text.text-uppercase= title2 
+                            h3.title-text= title3
+                        .banner__button-group.d-flex.flex-row.flex-wrap 
+                            button.btn.btn-primary Hire me 
+                            button.btn get CV 
+                    .col-lg-6.header__banner-image
+                        - const {bannerImg, altImg} = header.banner
+                            img(src=`./assets/images/banner/${bannerImg}` alt=`${altImg}`)
     section.intro 
         .container 
             .row 
@@ -92,4 +107,3 @@ block content
                 p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, deleniti recusandae. Esse incidunt rem repellendus ab voluptates maxime? Nemo, numquam!
         .container
             +carousel('testimonial')
-

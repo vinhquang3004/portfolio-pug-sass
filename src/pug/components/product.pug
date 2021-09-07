@@ -1,0 +1,22 @@
+mixin productCardGrid(img, imgAlt, detailLink, name, price, desc, link)
+    .product-block.text-center.p-3.my-3
+        .product-img 
+            img(src=`${img}`, alt= imgAlt)
+        a(href=detailLink) 
+            h3.h2.m-3.product-name= name
+        span.h3= price
+        br
+        a.product-buy-btn(href= link).btn.m-3 Buy
+mixin productCardList(img, imgAlt, detailLink, name, price, desc, link)
+    .product-block.product-block--list.my-3
+        .row 
+            .col-sm-12.col-md-4
+                .product-img
+                    img(src=`${img}`, alt= imgAlt)
+            .col-sm-12.col-md-8.my-auto.ps-5
+                a(href= detailLink) 
+                    h3.h2.product-name= name
+                span.h3.product-price= price
+                br
+                p.product-desc= desc
+                a.product-buy-btn(href= link).btn.mt-3 Buy

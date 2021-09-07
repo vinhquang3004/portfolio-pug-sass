@@ -1,0 +1,43 @@
+extends ../base/base.pug
+
+include ../components/input.pug
+include ../components/breadcrumb.pug
+
+block variables 
+    - const title = 'register'
+    - const currentPage = '/register.html'
+
+block content 
+    +breadcrumbs(breadcrumbs.register, currentPage)
+    section.register
+        .container 
+            .register__header.bg-light.p-5.my-5.text-uppercase.text-center
+                h3 Register
+            .register__content
+                .row.d-flex.justify-content-center
+                    .col-md-6.colsm-12
+                        form
+                            .row.my-3
+                                .col-md-6
+                                    label.form-label(for='exampleInputEmail1') First name
+                                    input#firstName.form-control(type='text')
+                                .col-md-6
+                                    label.form-label(for='exampleInputEmail1') Last name
+                                    input#LastName.form-control(type='text')
+                            .row 
+                                .my-3
+                                    label.form-label(for='exampleInputEmail1') Email address
+                                    input#exampleInputEmail1.form-control(type='email')
+                                .my-3
+                                    label.form-label(for='exampleInputPassword1') Password
+                                    input#exampleInputPassword1.form-control(type='password',value= '')
+                                .my-5.form-check.d-flex.align-items-center.justify-content-center
+                                    input#exampleCheck1.form-check-input(type='checkbox')
+                                    label.form-check-label(for='exampleCheck1') I agree all statement in
+                                    a(href="#!")
+                                        span Terms of service
+                            .login__summit.d-flex.justify-content-center
+                                button.btn.btn-primary(type='submit') Register
+                        .register-have-account.text-center.my-5
+                            span Have already an account? 
+                                a(href="/register.html") Login here 

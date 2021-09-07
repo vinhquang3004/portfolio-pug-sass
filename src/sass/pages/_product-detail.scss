@@ -1,0 +1,58 @@
+.product-detail {
+    
+    &__img {
+        padding: 50px;
+        img {
+            border-radius: 20px;
+            @include scale-img;
+        }
+    }
+    &__form {
+        padding: 0 50px 0 30px;
+        .title {
+            font: 500 4rem/2 $primary-font;
+            color: $primary-color;
+        }
+    }
+    &__price {
+        color: $primary-color;
+        font: 600 3rem/2 $primary-font;
+    }
+    &__desc {
+        h3 {
+            font: 500 2rem/2 $primary-font;
+        }
+        p {
+            font: 400 1.6rem/2 $primary-font;
+            color: $gray;
+        }
+    }
+}
+.qty-option {
+    &__input-group {
+        display: inline-block;
+        //   padding: 1rem;
+        background-color: $primary-color;
+
+        input {
+            text-align: center;
+            width: 7rem;
+            line-height: 2.4rem;
+            width: 40px;
+            margin-left: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        input,
+        button {
+            font-size: 1.6rem;
+            font-weight: bold;
+            border: none;
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+}

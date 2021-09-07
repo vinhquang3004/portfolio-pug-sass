@@ -1,0 +1,22 @@
+extends ../base/base.pug
+
+include ../components/breadcrumb.pug
+include ../components/input.pug
+
+block variables 
+    - const title = 'about'
+    - const currentPage = '/about.html'
+
+block content 
+    +breadcrumbs(breadcrumbs.about, currentPage)
+
+    section.about 
+        .container 
+            .row 
+                .col-lg-6.col-md-12 
+                    .about__image
+                        img(src="./assets/images/about-us.png", alt="")
+                .col-lg-6.col-md-12 
+                    .about__intro
+                        h3.h1.d-block Welcome to my portfolio 
+                        p.d-block Lorem ipsum dolor sit, amet consectetur adipisicing elit. At a accusantium accusamus ab minus saepe asperiores, sint tenetur nobis itaque odio, eum necessitatibus sapiente amet cumque, ipsa corrupti recusandae quo!

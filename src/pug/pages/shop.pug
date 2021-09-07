@@ -1,0 +1,64 @@
+extends ../base/base.pug
+
+include ../components/breadcrumb.pug
+include ../components/input.pug
+include ../components/product.pug
+
+block variables 
+    - const title = 'shop'
+    - const currentPage = '/shop.html'
+
+block content 
+    +breadcrumbs(breadcrumbs.shop, currentPage)
+
+    section.shop
+        .container 
+            .row 
+                .col-lg-3.col-md-12
+                    aside.shop__sidebar.p-5
+                        .row
+                            .col-12.col-md-4.col-lg-12
+                                .shop__category
+                                    h2.my-4.h2 Category
+                                        each item in shop.category 
+                                            - const {type, list} = item
+                                            h3.m-3.h3.pseudo-line= type
+                                            ul.shop__category-list
+                                                each item in list
+                                                    - const {name, quantity} = item
+                                                    li.shop__category-item.p-3
+                                                        a(href='#' class= name === shop.category[0].list[0].name ? 'active' : '')= name
+                                                            span=` (${quantity})`
+                            .col-12.col-md-8.col-lg-12 
+                                .shop__tag.mt-5
+                                    h3.h2.pseudo-line filter
+                                    each item in shop.tags 
+                                        if item === shop.tags[0]
+                                            a(href="#").tag.tag--active= item
+                                        else 
+                                            a(href="#").tag= item
+                                .shop__img.mt-5
+                                    img(src='./assets/images/shop-sidebar-img.png', alt='project image')
+                .col-lg-9.col-md-12
+                    .shop__main 
+                        input#grid-view(type="radio", name="productView", checked).d-none
+                        input#list-view(type="radio", name="productView").d-none
+                        .shop__header 
+                            .shop__view
+                                label(for="grid-view")
+                                    em.fas.fa-th                                
+                                label(for="list-view")
+                                    em.fas.fa-list
+                        .shop__grid 
+                            .row    
+                                each item in shop.list
+                                    - const {img, imgAlt, detailLink, name, price, desc, link}= item
+                                    .col-lg-4.col-sm-6
+                                        +productCardGrid(img, imgAlt, detailLink, name, price, desc, link)
+                        .shop__list 
+                            .row 
+                                - for (let i = 1; i <= 4; i++)
+                                    - const {img, imgAlt, detailLink, name, price, desc, link} = shop.list[i]
+                                    .col-12
+                                        +productCardList(img, imgAlt, detailLink, name, price, desc, link)
+                                        

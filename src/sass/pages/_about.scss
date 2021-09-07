@@ -1,0 +1,29 @@
+.about{
+    &__image{
+        border-radius: 20px;
+        padding: 50px;
+        @include scale-img;
+    }
+    &__intro{
+        padding: 150px 50px 50px;        
+        h3{
+            font: 500 4rem/1.4 $primary-font;
+        }
+        p{
+            font: 400 2rem/1.6 $primary-font;
+            margin-top: 50px;
+        }
+        @include media-breakpoint(xl, down){
+            padding: 50px;
+            p{
+                margin-top: 10px;
+            }
+        }
+        @include media-breakpoint(lg, down){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

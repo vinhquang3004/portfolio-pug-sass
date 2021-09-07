@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title> | vinh porfolio</title>
+  </head>
+  <body> 
+    <header class="header">
+      <div class="header__nav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid header__top-nav"><a class="header__logo navbar-brand" href="#"><img src="./assets/images/logo.png" alt="logo"></a>
+            <button class="header__navbar-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav header__nav-list">
+                <li class="nav-item header__nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item header__nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                <li class="nav-item header__nav-item"><a class="nav-link" href="/shop.html">Shop</a></li>
+                <li class="nav-item header__nav-item"><a class="nav-link" href="/porfolio.html">Porfolio</a></li>
+                <li class="nav-item header__nav-item"><a class="nav-link" href="/pages.html">Pages</a></li>
+                <li class="nav-item header__nav-item"><a class="nav-link" href="/login.html">Login</a></li>
+                <li class="nav-item header__nav-item"><a class="nav-link" href="/register.html">Register</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="breadcrumbs">
+      <div class="container"> 
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/shop.html">Shop</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Product Detail</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <section class="product-detail"> 
+      <div class="row"> 
+        <div class="col-12 col-md-6">
+          <div class="product-detail__img"><img src="./assets/images/shop/shop1.jpg" alt="Main product images"></div>
+        </div>
+        <div class="col-12 col-md-6">
+          <form class="product-detail__form mt-5">
+            <h3 class="title">Project team</h3>
+            <div class="product-detail__review"><em class="rating fas fa-star"></em><em class="rating fas fa-star"></em><em class="rating fas fa-star"></em><em class="rating fas fa-star-half-alt"></em><em class="rating far fa-star"></em><span class="ms-3">12 Reviews</span>
+            </div>
+            <div class="product-detail__price price my-3">50.00 $</div>
+            <div class="qty-option">
+              <h3 class="part-title my-3">Số lượng</h3>
+              <div class="d-flex">
+                <div class="qty-option__input-group me-4">
+                  <button class="qty-option__decrease">-</button>
+                  <input type="number" value="3">
+                  <button class="qty-option__increase">+</button>
+                </div>
+                <button class="btn" type="submit">Buy</button>
+              </div>
+            </div>
+            <div class="product-detail__desc my-3">
+              <h3 class="part-title">Description:</h3>
+              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer-content text-center">
+          <div class="footer__img"> <img class="mx-auto my-4" src="./assets/images/logo.png" alt=""></div>
+          <div class="footer__social"> 
+            <h3 class="h2 text-uppercase">Follow me </h3><a class="m-5" href="#"><i class="fab fa-facebook"></i></a><a class="m-5" href="#"><i class="fab fa-instagram"></i></a><a class="m-5" href="#"><i class="fab fa-youtube"> </i></a><a class="m-5" href="#"> <i class="fab fa-twitter"> </i></a>
+          </div>
+        </div>
+        <div class="footer__copyright text-center">
+          <p>Copyright @2021 All rights reserved | This template is made with by Vinh   <a href="#"><span>Quang Vinh </span></a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v11.0" nonce="2YOReVwH"></script>
+    <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+  </body>
+</html>

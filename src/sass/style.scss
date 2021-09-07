@@ -5,8 +5,15 @@
 @import "./components/button";
 @import "./components/item";
 @import "./components/carousel";
+@import "./components/breadcrumb";
+@import "./components/product";
 
 @import "./partials/header";
 @import "./partials/footer";
 
 @import "./pages/index";
+@import "./pages/login";
+@import "./pages/register";
+@import "./pages/about";
+@import "./pages/shop";
+@import "./pages/product-detail";

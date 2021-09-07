@@ -21,57 +21,5 @@
         }
     }
 
-    //-header banner
-    &__banner{
-        background: url(../images/banner/home-banner.png) no-repeat;
-        background-position: 0% 50%;
-        .header__site-title{
-            
-            h3{
-                font: 500 4rem/7rem $primary-font;
-            }
-            h2{
-                font: 600 8rem/10rem $primary-font;
-            }
-            .title-text_hey{
-                position: relative;
-            }
-            .title-text_hey::before{
-                content: "";
-                position: absolute;
-                @include box(18vw, 2px);
-                background-color: $black;
-                top:50%;
-                transform: translateY(-50%);
-                left: 100%;
-                margin-left: 30px;
-            }
-            @include media-breakpoint(sm, down){
-                h3{
-                    font: 500 3rem/5rem $primary-font;
-                }
-                h2{
-                    font: 600 5rem/7rem $primary-font;
-                }
-            }
-            @include media-breakpoint(lg, down){
-                margin-top: 100px;
-            }
-            
-            @include flex-center-column;
-            align-items: flex-start;
-            padding: 0 50px;
-        }
 
-        &-image{
-            padding: 7rem;
-
-        }
-    }
-
-    &__button-group{
-        .btn.btn-primary{
-            margin: 0 15px;
-        }
-    }
 }

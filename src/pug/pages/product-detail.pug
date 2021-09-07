@@ -1,0 +1,36 @@
+extends ../base/base.pug
+include ../components/breadcrumb.pug
+include ../components/product.pug
+include ../components/rating.pug
+
+block variables
+    - const title = 'product detail'
+    - const current = '/product-detail.html'
+
+block content
+    +breadcrumbs(breadcrumbs.productDetail, current)
+
+    section.product-detail 
+        - const {name, price, rating, numberOfReview, desc} = productDetail
+        .row 
+            .col-12.col-md-6
+                .product-detail__img
+                    img(src="./assets/images/shop/shop1.jpg" alt='Main product images')
+            .col-12.col-md-6
+                form.product-detail__form.mt-5
+                    h3.title= name
+                    .product-detail__review
+                        +rating(rating)
+                        span.ms-3= `${numberOfReview} Reviews`
+                    .product-detail__price.price.my-3= price
+                    .qty-option
+                        h3.part-title.my-3 Số lượng
+                        .d-flex
+                            .qty-option__input-group.me-4
+                                button.qty-option__decrease -
+                                input(type='number' value='3')
+                                button.qty-option__increase +
+                            button.btn(type="submit") Buy
+                    .product-detail__desc.my-3
+                        h3.part-title Description:
+                        p.desc= desc
